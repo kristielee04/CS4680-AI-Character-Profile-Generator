@@ -1,0 +1,61 @@
+Create a UNIQUE character profile that strictly follows the inputs below.
+
+Inputs:
+genre={genre}
+role={role}
+tone={tone}
+age_range={age_range}
+gender={gender}
+strengths={strengths}
+flaws={flaws}
+skills={skills}
+visual_keywords={visual_keywords}
+extra={extra}
+
+Return JSON with this structure:
+{
+  "character_profile": {
+    "basic_info": {
+      "name": "",
+      "genre": [],
+      "role": "",
+      "tone": [],
+      "age_range": "",
+      "gender": "",
+      "pronouns": "",
+      "summary": ""
+    },
+    "psychology": {
+      "personality_traits": [],
+      "motivations": [],
+      "fears": [],
+      "strengths": [],
+      "flaws": []
+    },
+    "background": {
+      "origin": "",
+      "key_life_events": [],
+      "current_status": ""
+    },
+    "skills_and_abilities": {
+      "skills": [],
+      "special_abilities": []
+    },
+    "visual_design": {
+      "body_type": "",
+      "clothing_style": "",
+      "color_palette": [],
+      "visual_keywords": [],
+      "distinctive_features": []
+    },
+    "narrative_hooks": {
+      "goals": [],
+      "conflicts": [],
+      "relationships": []
+    },
+    "extra_notes": {
+      "themes": [],
+      "additional_context": ""
+    }
+  }
+}

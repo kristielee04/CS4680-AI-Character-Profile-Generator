@@ -151,12 +151,3 @@ You can modify `static/style.css` to change the appearance.
 
 4. **Dependencies not found:**
    - Run `pip install -r requirements.txt` to install all required packages
-
-## Contributing
-
-Feel free to submit issues, feature requests, or pull requests to improve this application!
-
-## License
-
-This project is open source and available under the MIT License.
-"# CS4680-AI-Character-Profile-Generator" 

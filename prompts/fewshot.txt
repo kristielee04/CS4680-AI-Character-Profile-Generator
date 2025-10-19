@@ -1,0 +1,63 @@
+[INPUT]
+genre=fantasy
+role=swordsman
+tone=determined
+age_range=young adult
+gender=male
+strengths=loyal, disciplined
+flaws=stubborn, impulsive
+skills=swordsmanship, endurance
+visual_keywords=green hair, three swords
+extra="Inspired by classic anime heroes with strong sense of honor."
+
+[OUTPUT]
+{
+  "character_profile": {
+    "basic_info": {
+      "name": "Roronoa Zoro",
+      "genre": ["fantasy"],
+      "role": "swordsman",
+      "tone": ["determined"],
+      "age_range": "young adult",
+      "gender": "male",
+      "pronouns": "he/him",
+      "summary": "A fearless swordsman who trains relentlessly to become the world's strongest while protecting his crew."
+    },
+    "psychology": {
+      "personality_traits": ["loyal", "disciplined", "serious"],
+      "motivations": ["honor his promises", "surpass his limits", "protect his comrades"],
+      "fears": ["failing his captain", "losing his swords"],
+      "strengths": ["unshakable will", "focus under pressure"],
+      "flaws": ["stubborn", "impulsive", "poor sense of direction"]
+    },
+    "background": {
+      "origin": "Grew up in a small dojo, honing his sword skills from childhood.",
+      "key_life_events": [
+        "Trained under a master swordsman",
+        "Vowed to become the strongest swordsman alive",
+        "Joined a pirate crew to pursue his dream"
+      ],
+      "current_status": "Travels across seas facing rival swordsmen and monsters alike."
+    },
+    "skills_and_abilities": {
+      "skills": ["swordsmanship", "endurance", "battle strategy"],
+      "special_abilities": ["three-sword fighting style", "incredible physical resilience"]
+    },
+    "visual_design": {
+      "body_type": "muscular",
+      "clothing_style": "green robe and black bandana",
+      "color_palette": ["green", "black", "white"],
+      "visual_keywords": ["green hair", "three swords", "scarred torso"],
+      "distinctive_features": ["three earrings on his left ear", "a scar across his chest"]
+    },
+    "narrative_hooks": {
+      "goals": ["become the world's greatest swordsman"],
+      "conflicts": ["balancing ambition with loyalty to crew"],
+      "relationships": ["his captain", "his rival swordsmen"]
+    },
+    "extra_notes": {
+      "themes": ["honor", "discipline", "loyalty"],
+      "additional_context": "Embodies the archetype of a stoic warrior with unyielding resolve."
+    }
+  }
+}

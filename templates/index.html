@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Character Profile Generator</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>AI Character Profile Generator</h1>
+      </header>
+
+      <div class="main-content">
+        <div class="form-section">
+          <form id="characterForm" class="character-form">
+            <div class="form-grid">
+              <!-- Basic Information -->
+              <div class="form-group">
+                <label for="genre">
+                  <i class="fas fa-theater-masks"></i>
+                  Genre
+                </label>
+                <input
+                  type="text"
+                  id="genre"
+                  name="genre"
+                  placeholder="e.g., fantasy, sci-fi, modern, historical"
+                />
+                <small>What genre should this character belong to?</small>
+              </div>
+
+              <div class="form-group">
+                <label for="role">
+                  <i class="fas fa-user-tag"></i>
+                  Role
+                </label>
+                <input
+                  type="text"
+                  id="role"
+                  name="role"
+                  placeholder="e.g., hero, villain, mentor, sidekick"
+                />
+                <small>What role does this character play?</small>
+              </div>
+
+              <div class="form-group">
+                <label for="tone">
+                  <i class="fas fa-palette"></i>
+                  Tone
+                </label>
+                <input
+                  type="text"
+                  id="tone"
+                  name="tone"
+                  placeholder="e.g., dark, comedic, mysterious, heroic"
+                />
+                <small>What tone should the character embody?</small>
+              </div>
+
+              <div class="form-group">
+                <label for="age_range">
+                  <i class="fas fa-birthday-cake"></i>
+                  Age Range
+                </label>
+                <input
+                  type="text"
+                  id="age_range"
+                  name="age_range"
+                  placeholder="e.g., young adult, middle-aged, elderly"
+                />
+                <small>What age range should this character be?</small>
+              </div>
+
+              <div class="form-group">
+                <label for="gender">
+                  <i class="fas fa-venus-mars"></i>
+                  Gender
+                </label>
+                <select id="gender" name="gender">
+                  <option value="">Random (AI chooses)</option>
+                  <option value="female">Female</option>
+                  <option value="male">Male</option>
+                  <option value="nonbinary">Non-binary</option>
+                </select>
+                <small>What gender should this character be?</small>
+              </div>
+
+              <!-- Character Traits -->
+              <div class="form-group">
+                <label for="strengths">
+                  <i class="fas fa-shield-alt"></i>
+                  Strengths
+                </label>
+                <textarea
+                  id="strengths"
+                  name="strengths"
+                  placeholder="e.g., brave, intelligent, charismatic"
+                ></textarea>
+                <small>What are this character's main strengths?</small>
+              </div>
+
+              <div class="form-group">
+                <label for="flaws">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  Flaws
+                </label>
+                <textarea
+                  id="flaws"
+                  name="flaws"
+                  placeholder="e.g., prideful, impulsive, secretive"
+                ></textarea>
+                <small
+                  >What are this character's main flaws or weaknesses?</small
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="skills">
+                  <i class="fas fa-tools"></i>
+                  Skills
+                </label>
+                <textarea
+                  id="skills"
+                  name="skills"
+                  placeholder="e.g., sword fighting, magic, hacking, cooking"
+                ></textarea>
+                <small
+                  >What skills or abilities does this character have?</small
+                >
+              </div>
+
+              <div class="form-group">
+                <label for="visual_keywords">
+                  <i class="fas fa-eye"></i>
+                  Visual Keywords
+                </label>
+                <textarea
+                  id="visual_keywords"
+                  name="visual_keywords"
+                  placeholder="e.g., tall, red hair, scarred, elegant clothing"
+                ></textarea>
+                <small>How should this character look visually?</small>
+              </div>
+
+              <!-- Extra Information -->
+              <div class="form-group full-width">
+                <label for="extra">
+                  <i class="fas fa-plus-circle"></i>
+                  Additional Context
+                </label>
+                <textarea
+                  id="extra"
+                  name="extra"
+                  placeholder="Any additional details, backstory elements, or specific requirements..."
+                ></textarea>
+                <small>Any other details you'd like to include?</small>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button type="button" id="clearForm" class="btn btn-secondary">
+                <i class="fas fa-eraser"></i>
+                Clear Form
+              </button>
+              <button type="submit" id="generateBtn" class="btn btn-primary">
+                <i class="fas fa-magic"></i>
+                Generate Character
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div class="results-section" id="resultsSection" style="display: none">
+          <div class="results-header">
+            <h2>
+              <i class="fas fa-user-circle"></i> Generated Character Profile
+              <i class="fas fa-star"></i>
+            </h2>
+          </div>
+          <div class="character-display" id="characterDisplay">
+            <!-- Character profile will be displayed here -->
+          </div>
+        </div>
+
+      <div class="loading-overlay" id="loadingOverlay" style="display: none">
+        <div class="loading-spinner">
+          <p>Generating your character...</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+  </body>
+</html>

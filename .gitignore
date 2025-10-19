@@ -1,0 +1,44 @@
+# --- Environment & Secrets ---
+.env
+*.env
+.env.*
+
+# --- Python ---
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+.idea/
+.vscode/
+
+# --- Streamlit & Logs ---
+.streamlit/
+logs/
+*.log
+
+# --- OS & Editor files ---
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# --- Build & cache ---
+*.egg-info/
+*.egg
+dist/
+build/
+
+# --- Jupyter / Notebooks (optional) ---
+.ipynb_checkpoints/
+
+# --- Temporary files ---
+*.tmp
+*.bak
+*.old
